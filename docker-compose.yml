@@ -1,10 +1,12 @@
 services:
   scheduler:
-    image: alpine:3.18
+    build: .
+    image: dpsrv/scheduler
     container_name: scheduler
     env_file: ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
     volumes:
       - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/daily/:/etc/periodic/daily/:ro
+      - /var/run/docker.sock:/var/run/docker.sock
       - /etc/resolv.conf:/etc/resolv.conf:ro
       - /etc/localtime:/etc/localtime:ro
     command: [ "crond", "-f", "-d", "8" ]
