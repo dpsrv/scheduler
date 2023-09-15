@@ -11,3 +11,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     command: [ "crond", "-f", "-d", "8" ]
     restart: unless-stopped
+networks:
+  default:
+    name: dpsrv
+    external: true
