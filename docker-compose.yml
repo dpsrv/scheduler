@@ -2,7 +2,7 @@ services:
   scheduler:
     build: .
     image: dpsrv/scheduler
-    container_name: scheduler
+    container_name: dpsrv-scheduler
     env_file: ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
     volumes:
       - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/daily/:/etc/periodic/daily/:ro
