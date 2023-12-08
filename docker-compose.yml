@@ -9,8 +9,8 @@ services:
     volumes:
       - $PWD/../:/root/dpsrv
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/1min/:/etc/periodic/1min/:ro
-      - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/daily/:/etc/periodic/daily/:ro
+      - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/1min/:/etc/periodic/1min/
+      - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/daily/:/etc/periodic/daily/
       - $HOME/.git-credentials:/root/.git-credentials:ro
       - $HOME/.gitconfig:/root/.gitconfig:ro
       - $HOME/.config:/root/.config:ro
