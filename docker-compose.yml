@@ -14,7 +14,6 @@ services:
       - ${HOME}/.git-credentials:/root/.git-credentials:ro
       - ${HOME}/.gitconfig:/root/.gitconfig:ro
       - ${HOME}/.config:/root/.config:ro
-      - /etc/resolv.conf:/etc/resolv.conf:ro
       - /etc/localtime:/etc/localtime:ro
     command: [ "crond", "-f", "-d", "8" ]
     restart: unless-stopped
