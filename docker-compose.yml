@@ -1,8 +1,8 @@
 services:
   dpsrv-scheduler:
     build: .
-    image: dpsrv/scheduler-${tag:-latest}
-    container_name: dpsrv-scheduler:${tag:-latest}
+    container_name: dpsrv-scheduler-${tag:-latest}
+    image: dpsrv/scheduler:${tag:-latest}
     env_file:
       - ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
       - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/local.env
