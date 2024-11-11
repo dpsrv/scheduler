@@ -8,7 +8,7 @@ services:
       - ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
       - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/${HOSTNAME}.env
     volumes:
-      - $PWD/../:/root/dpsrv
+      - $PWD/../:/mnt/data/dpsrv/
       - /var/run/docker.sock:/var/run/docker.sock
       - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/1min/:/etc/periodic/1min/:ro
       - ${DPSRV_HOME}/rc/secrets/scheduler/periodic/daily/:/etc/periodic/daily/:ro
