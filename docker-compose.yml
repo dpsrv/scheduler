@@ -6,7 +6,7 @@ services:
     hostname: $HOSTNAME.dpsrv.me
     env_file:
       - ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
-      - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/${HOSTNAME}.env
+      - ${DPSRV_HOME}/local.env
     volumes:
       - /mnt/data/dpsrv/:/mnt/data/dpsrv/
       - /var/run/docker.sock:/var/run/docker.sock
