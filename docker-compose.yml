@@ -2,7 +2,10 @@ services:
   dpsrv-scheduler:
     container_name: dpsrv-scheduler-${tag:-latest}
     image: dpsrv/scheduler:${tag:-latest}
-    build: .
+    build:
+      context: .
+      args:
+        DPSRV_UID: ${DPSRV_UID}
     hostname: $HOSTNAME.dpsrv.me
     env_file:
       - ${DPSRV_HOME}/rc/secrets/scheduler/scheduler.env
